@@ -184,6 +184,8 @@
         </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="modelo.html">Modelo matemático para o Pêndulo Interrompido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historia.html">O pêndulo na história da ciência</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencias.html">Referências</a></li>
 </ul>
 
     </div>
@@ -379,9 +381,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-experimento-e-seu-uso-didatico">O experimento e seu uso didático</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-pendulo-na-historia-da-ciencia">O pêndulo na história da ciência</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referências</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducao">Introdução</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-experimento-e-seu-uso-didatico">O experimento e seu uso didático</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacao-de-energia-mecanica">Conservação de energia mecânica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-abordagem-pegadinha">Uma abordagem “pegadinha”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-abordagem-verificacionista">Uma abordagem verificacionista</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -395,6 +401,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="o-pendulo-interrompido-proposta">
 <h1>O Pêndulo Interrompido: proposta<a class="headerlink" href="#o-pendulo-interrompido-proposta" title="Link to this heading">#</a></h1>
+<section id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Link to this heading">#</a></h2>
 <p>No “terceiro dia” do seu último livro, Duas Novas Ciências, Galileu discute uma experiência com um pêndulo interrompido, em que a corda é obstruída no meio do percurso por um pino. O pêndulo, apesar de se deslocar em dois arcos diferentes, atinge a mesma altura de onde foi libertado.</p>
 <figure class="align-default" id="galileu-pi">
 <img alt="_images/galileu-ip.png" src="_images/galileu-ip.png" />
@@ -410,6 +418,10 @@ document.write(`
 </figcaption>
 </figure>
 <p>Mais tarde, Galileu vai usar uma ideia parecida, quando fala sobre a descida e subida em rampas com ângulos diferentes mas com as mesmas alturas, onde uma massa adquira velocidade na descida, justamente suficiente para subir novamente. Porém, rampas e bolas rolando parecem estar sujeitos a mais “impedimentos” e “imperfeições”. Talvez considerou o pêndulo interrompido, mesmo como experimento de pensamento, um sistema mais “limpo” para mostrar a plausibilidade do seu postulado.</p>
+<blockquote>
+<div><p>The real, inclined-plane, situation is difficult and messy. It abounds with “accidents” and “impediments.” Galileo used a simple but brilliant pendulum experiment to minimize friction, to minimize the impact problem at the join of the planes, and to approach further to the ideal case.</p>
+<p>– <span id="id2">[<a class="reference internal" href="referencias.html#id4" title="Michael R. Matthews. Time for Science Education: How Teaching the History and Philosophy of Pendulum Motion can Contribute to Science Literacy. Volume 8 of Innovations in Science Education and Technology. Springer Netherlands, Dordrecht, 2000. ISBN 978-0-306-45880-4 978-94-011-3994-6. URL: http://link.springer.com/10.1007/978-94-011-3994-6 (visited on 2024-12-29), doi:10.1007/978-94-011-3994-6.">Mat00</a>]</span></p>
+</div></blockquote>
 <p>Durante a discussão do pêndulo interrompido o Galileu afirma algo que não é verdade. É preciso reconhecer que a afirmação não afeta o raciocínio principal, o que postulado que a massa chega na mesma altura de que foi solta, independente do caminho. Mas é interessante comparar o que diz Galileu com o que um iniciante hoje diria quando é instigado sobre o problema. Certamente a massa “quer” chegar na mesma altura do que foi solta e quando o pino está disposto de maneira que isso é impossível, ou quando a altura de soltura é grande demais, então a massa deve fazer a volta inteira e o fio do pêndulo deve se enrolar.</p>
 <figure class="align-default" id="galileu-erro">
 <img alt="_images/galileu-erro.png" src="_images/galileu-erro.png" />
@@ -418,28 +430,57 @@ document.write(`
 </figcaption>
 </figure>
 <p>Na página <a class="reference internal" href="modelo.html"><span class="std std-doc">Modelo</span></a> construimos um modelo onde a trajetória da massa é circular até o momento que a força tensão (o vínculo que mantem a trajetória circular) é zero. A partir deste momento a trajetória é uma parábola. Para que o fio se enrola enrosca em volta do pino, é suficiente soltar a massa de uma altura um pouco menor do que <span class="math notranslate nohighlight">\(h\)</span>, o raio do círculo e posição do pino. É suficiente soltar a massa de <span class="math notranslate nohighlight">\(\sqrt{3}/2h = 0.866h\)</span>.</p>
+</section>
 <section id="o-experimento-e-seu-uso-didatico">
 <h2>O experimento e seu uso didático<a class="headerlink" href="#o-experimento-e-seu-uso-didatico" title="Link to this heading">#</a></h2>
 <p>Veja uma visão global do experimento:</p>
 <iframe width="640" height="360" src="https://eaulas.usp.br/portal/embed-video?idItem=19667&autostart=false" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<p>A pergunta agora é se há um potencial didático neste experimento.</p>
+<section id="conservacao-de-energia-mecanica">
+<h3>Conservação de energia mecânica<a class="headerlink" href="#conservacao-de-energia-mecanica" title="Link to this heading">#</a></h3>
+<p>O uso mais óbvio é fazer uma analogia como o experimento <em>loop</em>. Como mencionado em <span id="id3">[<a class="reference internal" href="referencias.html#id6" title="Laís de O. Borges, Marcos de L. Leite, and Nora L. Maidana. Crítica a la formulación teórica del problema del loop desde el punto de vista experimental. Revista de Enseñanza de la Física, 31:71–76, November 2019. URL: https://revistas.unc.edu.ar/index.php/revistaEF/article/view/26528 (visited on 2025-01-06).">BLM19</a>]</span>, experimentos muitas vezes são considerados como ilustrações e podem servir para contextualizar modelos teóricos visto em livros-texto ou em sala de aula. O <em>loop</em> é o tipo de exercício usado como ilustração de como considerações de conservação de energia mecânica podem tornar viáveis sua solução. Neste contexto vale também lembrar o estudo clássico na área de ensino de física que mostra como iniciantes e especialistas classificam exercícios de física diferentemente: os especialistas classificam exercícios baseados nos princípios físicos necesssários para resolvê-los (conservação de energia, segunda lei de Newton, etc.), enquanto iniciantes focam nas características superficiais (por exemplo se envolve rampas, ou polias ou forças gravitationais, ou a força normal) <span id="id4">[<a class="reference internal" href="referencias.html#id2" title="Michelene T. H. Chi, Paul J. Feltovich, and Robert Glaser. Categorization and Representation of Physics Problems by Experts and Novices. Cognitive Science, 5(2):121–152, 1981. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1207/s15516709cog0502_2. URL: https://onlinelibrary.wiley.com/doi/abs/10.1207/s15516709cog0502_2 (visited on 2024-12-17), doi:10.1207/s15516709cog0502_2.">CFG81</a>]</span>.</p>
+<p>Nesta abordagem podemos pensar numa encaminhamento parecido com o atual experimento do MEXI <a class="reference external" href="http://www.fep.if.usp.br/~fisfoto/rotacao/loop/index.php">Loop</a>. É interessante o fato que o modelo matemático é igual para o loop e o pêndulo interrompido, mas os desvios do modelo devem ser bem diferentes: atrito (do ar, de deslizamento) e energia convertido em energia rotacional pelo rolamento num caso e atrito do ar e interno do fio no outro caso.</p>
 </section>
-<section id="o-pendulo-na-historia-da-ciencia">
-<h2>O pêndulo na história da ciência<a class="headerlink" href="#o-pendulo-na-historia-da-ciencia" title="Link to this heading">#</a></h2>
-<p>Desde Galileu, o pêndulo virou um verdadeiro “exemplar” no sentido Kuhniano. Simultaneamente modelo e instrumento, sujeito à análise teórico e usado como instrumento, iterativamente. Segundo Michael Matthews, Newton uso o pêndulo para</p>
+<section id="uma-abordagem-pegadinha">
+<h3>Uma abordagem “pegadinha”<a class="headerlink" href="#uma-abordagem-pegadinha" title="Link to this heading">#</a></h3>
+<p>Um uso didático alternativo visa trabalhar a relação entre modelo matemático, suas premissas e suas limitações. Dado o modelo físico (o pêndulo interrompido ou o <em>loop</em>), existem pelo menos duas hipóteses plausíveis e atraentes para novatos, porém errôneas:</p>
+<ol class="arabic simple">
+<li><p>Perguntamos a altura mínima de abondono para qual a massa do pêndulo ou a bolinha completa o círculo. Uma raciocínio inicial seria pensar que a massa “quer” voltar para a altura de abaondo e que portanto que precisamos usar (usando os coordenados e termos do <a class="reference internal" href="modelo.html"><span class="std std-doc">modelo</span></a>) <span class="math notranslate nohighlight">\(H \geq h)\)</span>. Este raciocínio revelaria uma “física cartunesca”, onde a velocidade da massa se torna zero no topo da trajetória e em seguida cai verticalmente. Na verdade, para o modelo idealizado, é preciso soltar a massa de pelo menos <span class="math notranslate nohighlight">\(H \geq 3/2h\)</span> para que no topo da trajetória a velocidade é suficiente para que a aceleração centrípeta corresponde à força peso <span class="math notranslate nohighlight">\(mg\)</span>.</p></li>
+<li><p>Perguntamos uma outra pergunta, agora no contexto do pêndulo interrompido. Se soltar a massa da <span class="math notranslate nohighlight">\(H \leq 0\)</span>, por conservação de energia, (teoricamente!) é claro que a massa subirá até a mesma altura no outro lado do pino. Perguntamos agora: qual é a altura mínima necessário para qual a massa pula por cima do pino e o fio se enrosca? O novato talvez quer responder <span class="math notranslate nohighlight">\(H \geq h\)</span>, porque o a massa “quer” chegar na altura de abondono, mas é impedido pelo raio de círculo sendo <span class="math notranslate nohighlight">\(h\)</span>. Um outro novato, já mais esperto por causa da sua experiência com o tipo de exercío mencionado acima, acha o que poderia ser <span class="math notranslate nohighlight">\(H = 3/2h\)</span>. Ambos estariam errados, conforme o <a class="reference internal" href="modelo.html"><span class="std std-doc">modelo</span></a>), que leva em conta que a partir de um ângulo dado por <span class="math notranslate nohighlight">\(\sin{\theta_c} = 1/\sqrt{3}\)</span> ou 35,3°, a trajetória é parabólica e somente precisamos de no mínimo <span class="math notranslate nohighlight">\(H_c = \sqrt{3}/2h = 0.866h\)</span> para que a massa passa pelo <span class="math notranslate nohighlight">\((0,0)\)</span> ou <em>justamente</em> pela posição do pino.</p></li>
+</ol>
+<p>Uma vez, 15 anos atrás, fiz o segundo experimento com alunos da farmácia. Pedi eles medir a altura de abandono crítica <span class="math notranslate nohighlight">\(H_c\)</span> para vários valores do raio do círculo <span class="math notranslate nohighlight">\(h\)</span>. Os grupos logo se deram conta que o valor era aproximadamente dado por <span class="math notranslate nohighlight">\(H_c = h\)</span> e até conseguiram o raciocíno (ingênuo, ou pelo menos incompleto) pela conservação de energia. Mas não se deram conta que o valor verdadeiro era ligeiramente (14%) abaixo deste valor.</p>
+<p>Um aspecto importante do experimento era o prazer motórico de “acertar” o pino, tornando as medidas (um pouco) menos maçantes.</p>
+<p>Quando eu mesmo fiz o experimento com da ordem de 20 alturas do pino diferentes, cheguei num ajuste <span class="math notranslate nohighlight">\(Hc = (0.98 \pm 0.005) h\)</span>, longe do valor do modelo. Acredito que pode ter havido um grande erro sistemático na determinação das alturas, sobretudo a altura de abandono. Um outro motivo pela discrepância é que os efeitos de atrito (arrasto do ar, perda de energia na choque com o pino) elevaram a altura de abandono necessária para chegar justamente na altura necessário para a massa bater no pino.</p>
+<p>Mas esse resultado leva a uma situação interessante: o resultado experimental parecia confirmar uma previsão errônea (<span class="math notranslate nohighlight">\(H_c = h\)</span>). É uma oportunidade de discutir algo que historiadores da ciência debatem: o papel de experimentos e a relação entre modelo e mundo real para Galileu e a ciência em geral. Há interlocutores contemporâneos do Galileu (del Monte, por exemplo), conforme recontando pelo Michael Matthews (<span id="id5">[<a class="reference internal" href="referencias.html#id4" title="Michael R. Matthews. Time for Science Education: How Teaching the History and Philosophy of Pendulum Motion can Contribute to Science Literacy. Volume 8 of Innovations in Science Education and Technology. Springer Netherlands, Dordrecht, 2000. ISBN 978-0-306-45880-4 978-94-011-3994-6. URL: http://link.springer.com/10.1007/978-94-011-3994-6 (visited on 2024-12-29), doi:10.1007/978-94-011-3994-6.">Mat00</a>]</span>)</p>
 <blockquote>
-<div><p>“…estabelecer um valor para a constante gravitacional, para refutar o éter, para distinguir massa de peso, para determinar as viscosidades relativas dos fluidos, para efetuar experiências de colisão controlada, para ilustrar as leis da conservação, para servir de cronômetro de precisão e para determinar a velocidade do som no ar.”</p>
-<p>– <span id="id2">[<a class="reference internal" href="#id6" title="Michael R. Matthews. Time for Science Education: How Teaching the History and Philosophy of Pendulum Motion can Contribute to Science Literacy. Volume 8 of Innovations in Science Education and Technology. Springer Netherlands, Dordrecht, 2000. ISBN 978-0-306-45880-4 978-94-011-3994-6. URL: http://link.springer.com/10.1007/978-94-011-3994-6 (visited on 2024-12-29), doi:10.1007/978-94-011-3994-6.">Mat00</a>]</span> (tradução nossa).</p>
+<div><p>Galileo and del Monte had had an earlier exchange of letters (they were lost by the time Galileo’s Opere was collected) about motion in a semicircle, and it was Galileo’s beliefthat such motion was tautochronous.8 Del Monte could not believe these claims and found them wanting when he rolled balls inside an iron hoop. He was a scientist-engineer and enough of an Aristotelian to believe that tests against experience were the ultimate adjudicator of claims in physics. Galileo’s claims failed the test. But Galileo replied that accidents interfered with del Monte’s test: his wheel rim was not perfectly circular and, as he stated elsewhere, the rim was not smooth enough.</p>
 </div></blockquote>
-<p>A análise teórico do pêndulo mais importante foi feito antes de Newton pelo Huygens, que estabeleu</p>
+<p>Mas, observe Matthews,</p>
+<blockquote>
+<div><p>It should not be inferred from the foregoing that Galileo was indifferent to experimental evidence. He was a most careful experimenter. His insight was to have a mathematical model of motion and then to compare real motions with this model; his “world on paper” preceded his “real world.”</p>
+</div></blockquote>
+<p>A pergunta relavante para a história da ciência e a ciência escolar é: qual é papel de intuições <em>a priori</em>, o universo da matemática e as abstrações humanas versus o papel dos resultados experimentais, o mundo real. Quando decidimos que uma discrepância é um mero imperfeição e quando a mesma discrepância revela algo importante sobre o mundo?</p>
 </section>
-<section id="referencias">
-<h2>Referências<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id3">
-<div role="list" class="citation-list">
-<div class="citation" id="id6" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Mat00<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id8">2</a>)</span>
-<p>Michael R. Matthews. <em>Time for Science Education: How Teaching the History and Philosophy of Pendulum Motion can Contribute to Science Literacy</em>. Volume 8 of Innovations in Science Education and Technology. Springer Netherlands, Dordrecht, 2000. ISBN 978-0-306-45880-4 978-94-011-3994-6. URL: <a class="reference external" href="http://link.springer.com/10.1007/978-94-011-3994-6">http://link.springer.com/10.1007/978-94-011-3994-6</a> (visited on 2024-12-29), <a class="reference external" href="https://doi.org/10.1007/978-94-011-3994-6">doi:10.1007/978-94-011-3994-6</a>.</p>
+<section id="uma-abordagem-verificacionista">
+<h3>Uma abordagem verificacionista<a class="headerlink" href="#uma-abordagem-verificacionista" title="Link to this heading">#</a></h3>
+<p>O <a class="reference internal" href="modelo.html"><span class="std std-doc">modelo</span></a> faz algumas previsões que podem ser checados pela análise das imagens.</p>
+<ol class="arabic simple">
+<li><p>O modelo dá valores exatos para os valores de posição e velocidade em termos da altura de abandono e a posição do pino (note que o comprimento do pêndulo antes de bater no pino não entra no modelo). Podemos verificar a trajetória, tanto quando é circular, como na parte parabólica e comparar com a previsão do modelo. Podemos inferir forças de vínculo (da tensão) e de atrito.</p></li>
+<li><p>O modelo faz uma previsão para o ângulo em que a tensão do fio se torna zero, dado que a trajetória passa pelo ponto <span class="math notranslate nohighlight">\((0,0)\)</span> do pino. Pelas imagens exploratórios que foram feitas, este valor é viável de determinar com bastante precisão e muito próximo ao valor previsto (35,3°). É fácil de determinar porque o fio alcança seu valor máximo para o ângulo quando a tensão se torna zero. O limite do ângulo nos frames que antecedem o ângulo crítico é fácil de determinar. Veja as imagens abaixo. A boa concordância, mesmo sem grandes cuidados no arranjo, é fortuito? Ou o ângulo crítico simplesmente não é muito sensível a imperfeições na trajetória real em comparação com a trajetória do modelo?</p></li>
+</ol>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column sd-border-1 docutils">
+<a class="reference internal image-reference" href="_images/vlcsnap-2025-01-05-18h38m17s588.png"><img alt="_images/vlcsnap-2025-01-05-18h38m17s588.png" class="align-center" src="_images/vlcsnap-2025-01-05-18h38m17s588.png" style="width: 100%;" /></a>
+</div>
+<div class="sd-col sd-d-flex-column sd-border-1 docutils">
+<a class="reference internal image-reference" href="_images/vlcsnap-2025-01-05-18h40m21s352.png"><img alt="_images/vlcsnap-2025-01-05-18h40m21s352.png" class="align-center" src="_images/vlcsnap-2025-01-05-18h40m21s352.png" style="width: 100%;" /></a>
+</div>
+<div class="sd-col sd-d-flex-column sd-border-1 docutils">
+<a class="reference internal image-reference" href="_images/vlcsnap-2025-01-05-18h40m22s748.png"><img alt="_images/vlcsnap-2025-01-05-18h40m22s748.png" class="align-center" src="_images/vlcsnap-2025-01-05-18h40m22s748.png" style="width: 100%;" /></a>
+</div>
+<div class="sd-col sd-d-flex-column sd-border-1 docutils">
+<a class="reference internal image-reference" href="_images/vlcsnap-2025-01-05-18h41m11s711.png"><img alt="_images/vlcsnap-2025-01-05-18h41m11s711.png" class="align-center" src="_images/vlcsnap-2025-01-05-18h41m11s711.png" style="width: 100%;" /></a>
 </div>
 </div>
 </div>
@@ -447,9 +488,10 @@ document.write(`
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="exp" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>O papel de experimentos, experimentos idealizados ou de pensamento e “impedimentos” é muito interessante para investigar. Há diferentes interpretações na literatura (Koyré versus Stillman Drake, por exemplo). Há uma discussão interessante sobre as lições epistemilógicas do Galileu e como poderiam ser tratados em sala de aula em <span id="id8">[<a class="reference internal" href="#id6" title="Michael R. Matthews. Time for Science Education: How Teaching the History and Philosophy of Pendulum Motion can Contribute to Science Literacy. Volume 8 of Innovations in Science Education and Technology. Springer Netherlands, Dordrecht, 2000. ISBN 978-0-306-45880-4 978-94-011-3994-6. URL: http://link.springer.com/10.1007/978-94-011-3994-6 (visited on 2024-12-29), doi:10.1007/978-94-011-3994-6.">Mat00</a>]</span></p>
+<p>O papel de experimentos, experimentos idealizados ou de pensamento e “impedimentos” é muito interessante para investigar. Há diferentes interpretações na literatura (Koyré versus Stillman Drake, por exemplo). Há uma discussão interessante sobre as lições epistemilógicas do Galileu e como poderiam ser tratados em sala de aula em <span id="id6">[<a class="reference internal" href="referencias.html#id4" title="Michael R. Matthews. Time for Science Education: How Teaching the History and Philosophy of Pendulum Motion can Contribute to Science Literacy. Volume 8 of Innovations in Science Education and Technology. Springer Netherlands, Dordrecht, 2000. ISBN 978-0-306-45880-4 978-94-011-3994-6. URL: http://link.springer.com/10.1007/978-94-011-3994-6 (visited on 2024-12-29), doi:10.1007/978-94-011-3994-6.">Mat00</a>]</span></p>
 </aside>
 </aside>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -510,9 +552,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-experimento-e-seu-uso-didatico">O experimento e seu uso didático</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-pendulo-na-historia-da-ciencia">O pêndulo na história da ciência</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referências</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducao">Introdução</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-experimento-e-seu-uso-didatico">O experimento e seu uso didático</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacao-de-energia-mecanica">Conservação de energia mecânica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-abordagem-pegadinha">Uma abordagem “pegadinha”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-abordagem-verificacionista">Uma abordagem verificacionista</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
