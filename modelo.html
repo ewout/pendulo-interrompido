@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Modelo matemático para o Pêndulo Interrompido &#8212; O Pêndulo Interrompido</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modelo';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="O Pêndulo Interrompido: proposta" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="O Pêndulo Interrompido - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="O Pêndulo Interrompido - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    O Pêndulo Interrompido: proposta
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modelo matemático para o Pêndulo Interrompido</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmodelo.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/modelo.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modelo matemático para o Pêndulo Interrompido</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condicao-para-justamente-completar-o-circulo">Condição para <em>justamente</em> completar o círculo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condicao-para-justamente-passar-pelo-centro-do-circulo">Condição para <em>justamente</em> passar pelo centro do círculo</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="modelo-matematico-para-o-pendulo-interrompido">
+<h1>Modelo matemático para o Pêndulo Interrompido<a class="headerlink" href="#modelo-matematico-para-o-pendulo-interrompido" title="Link to this heading">#</a></h1>
+<p>Vamos analisar um modelo matemático para descrever a trajetória de uma massa num <em>loop</em> ou para um pêndulo interrompido. Vamos admitir que, dependendo da velocidade inicial e energia cinética na parte mais baixo do círculo, a trajetória pode</p>
+<ol class="arabic simple">
+<li><p>ser parcialmente circular e periódica: a velocidade inicial não é suficiente para subir mais do que um raio do círculo;</p></li>
+<li><p>ser inicialmente circular, mas a partir de uma certa altura ou ângulo crítico a massa se “desprende” da trajetória circular, a força normal ou da tensão é zerada e a massa segue em queda livre;</p></li>
+<li><p>ser completamente circular: a velocidade incicial é suficiente para completar o círculo.</p></li>
+</ol>
+<p>Durante a parte circular da trajetória circular há forças de vínculo (a força normal e a tensão no fio respectivamente) fornecendo parte da força centrípeta. Em ambos os casos há a força da gravidade, com componentes perpendicular (fornecendo uma parte da força centrípeta) e tangencial. Há, obviamente, também forças de atrito e graus de liberdade (rotação da massa, movimento do fio) que não vamos considerar inicialmente.</p>
+<p>Nossa referência é o centro do círculo (0,0). Vamos chamar o raio do círculo <span class="math notranslate nohighlight">\(h\)</span> e soltamos a massa <span class="math notranslate nohighlight">\(m\)</span> de uma altura <span class="math notranslate nohighlight">\(H\)</span>. Em nosso referencial, se o ponto mais baixo da trajetória é <span class="math notranslate nohighlight">\(-h\)</span> e se a gente solta a massa de <span class="math notranslate nohighlight">\(H \leq 0\)</span>, estamos na situação 1 acima, a de movimento periódico.  Se <span class="math notranslate nohighlight">\(H \geq 0\)</span>, a velocidade <span class="math notranslate nohighlight">\(v_0\)</span> em <span class="math notranslate nohighlight">\((-h,0)\)</span> é dado por</p>
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq1" title="Link to this equation">#</a></span>\[
+\frac{1}{2}v_{0}^{2} = gH 
+\]</div>
+<p>A equação <a class="reference internal" href="#equation-eq1">(1)</a> assume que soltamos a massa com velocidade zero.</p>
+<section id="condicao-para-justamente-completar-o-circulo">
+<h2>Condição para <em>justamente</em> completar o círculo<a class="headerlink" href="#condicao-para-justamente-completar-o-circulo" title="Link to this heading">#</a></h2>
+<p>É instrutivo começar com o caso em que a massa atinge <em>justamente</em> a altura <span class="math notranslate nohighlight">\(h\)</span> (o terceiro caso das três possibilidades descritas acima). Qual é a altura que precisamos solter a massa para isso acontecer? Parece o tipo de problema onde é suficiente usar considerações de conservação de energia mecânica. Uma análise ingênua, de um iniciante, poderia concluir que precisamos soltar a massa de <span class="math notranslate nohighlight">\(H=h\)</span>. Afinal, meste caso, a energia potencial inicial <span class="math notranslate nohighlight">\(mgH\)</span> é convertida totalmente para a energia potencial final <span class="math notranslate nohighlight">\(mgh\)</span>. A massa não “quer” chegar na mesma altura de onde partiu?</p>
+<p>Esse raciocício ignora o fato que a velocidade da massa no topo da trajetória (vamos chamar de <span class="math notranslate nohighlight">\(v_t\)</span>) não pode ser zero. Para nosso modelo, a força de vínculo (a força normal ou a tensão no fio) pode ser zero no topo da trajetória mas para continuar em movimento circular deve haver uma a força centrípeta, dado somente pela gravidade, resultando numa velocidade mínima no topo</p>
+<div class="math notranslate nohighlight">
+\[ \frac{v_t^2}{h} = g \]</div>
+<p>Combinando com a conservação de energia mecânica</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}v_{t}^2 = \frac{1}{2}v_0^2 - gh \]</div>
+<p>e temos que</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}gh + gh = gH \Rightarrow H = \frac{3}{2} h \]</div>
+<p>Ou seja, precisamos soltar a massa de uma altura um pouco <em>mais</em> do que <span class="math notranslate nohighlight">\(h\)</span> para <em>justamente</em> chegar na altura <span class="math notranslate nohighlight">\(h\)</span> no topo da trajetória, porque no nosso modelo no topo há uma aceleração centrípeta mínima (quando a força normal ou de tensão no fio são zero), dado pela aceleração da gravidade <span class="math notranslate nohighlight">\(g\)</span>.</p>
+</section>
+<section id="condicao-para-justamente-passar-pelo-centro-do-circulo">
+<h2>Condição para <em>justamente</em> passar pelo centro do círculo<a class="headerlink" href="#condicao-para-justamente-passar-pelo-centro-do-circulo" title="Link to this heading">#</a></h2>
+<p>Se soltar a massa de uma altura <span class="math notranslate nohighlight">\(0 &lt; H &lt;  \frac{3}{2}h \)</span> em algum momento antes de chegar no topo a magnitude da força de vínculo se torna zero e a massa segue em queda livre. Começando com velocidade inicial <span class="math notranslate nohighlight">\(v_0\)</span> em <span class="math notranslate nohighlight">\((-h,0)\)</span>, perguntamos para qual ângulo <span class="math notranslate nohighlight">\(\theta_c\)</span> a força de vínculo (a tensão ou força normal) se torna zero.</p>
+<p>XXX inserir uma figura</p>
+<p>No momento crítico em que a força de vínculo é zero, a força centrípeta é dado (somente) pela componente perpendicular da força gravitação e temos</p>
+<div class="math notranslate nohighlight" id="equation-eq2">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq2" title="Link to this equation">#</a></span>\[
+\frac{v_{c}^{2}}{h}  = g \sin{\theta_c}.
+\]</div>
+<p>Por outro lado, pela conservação de energia mecânica</p>
+<div class="math notranslate nohighlight" id="equation-eq3">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq3" title="Link to this equation">#</a></span>\[
+  \frac{1}{2}v_{c}^2 = \frac{1}{2}v_{0}^2 -gh\sin{\theta_c}
+\]</div>
+<p>Combinando <a class="reference internal" href="#equation-eq2">(2)</a> e <a class="reference internal" href="#equation-eq3">(3)</a>, e usando <span class="math notranslate nohighlight">\(H_c\)</span> (para a “altura de soltura crítica”) em <a class="reference internal" href="#equation-eq1">(1)</a>, temos</p>
+<div class="math notranslate nohighlight" id="equation-eq4">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq4" title="Link to this equation">#</a></span>\[
+  \sin{\theta_c} = \frac{2}{3}\frac{H_c}{h}.
+\]</div>
+<p>Agora vamos escrever as equações horárias para a parábola de queda livre <span class="math notranslate nohighlight">\(x(t)\)</span> e <span class="math notranslate nohighlight">\(y(t)\)</span> com a posição inicial <span class="math notranslate nohighlight">\((-h\cos{\theta_c},h\sin{\theta_c})\)</span> e velocidade inicial <span class="math notranslate nohighlight">\(\vec{v_c}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x(t) &amp; = -h\cos{\theta_c} + v_c\sin{\theta_c}t  \\
+y(t) &amp; = h\sin{\theta_c} + v_c\cos{\theta_c}t - \frac{1}{2}gt^2
+\end{aligned}
+\end{split}\]</div>
+<p>Para que essa parábola passa pelo <span class="math notranslate nohighlight">\((0,0)\)</span> podemos mostrar que precisamos ter <span class="math notranslate nohighlight">\(\sin{\theta_c} = \sqrt{1/3}\)</span> (ou <span class="math notranslate nohighlight">\(\theta_c = 35.3^{\circ}\)</span>). Inserindo isso em <a class="reference internal" href="#equation-eq4">(4)</a> chegamos a</p>
+<div class="math notranslate nohighlight">
+\[
+  \boxed{\frac{H_c}{h} = \frac{\sqrt{3}}{2}}
+\]</div>
+<p>Ou seja, precisamos soltar a massa de uma altura de <span class="math notranslate nohighlight">\(0.866\)</span> do raio para que a parábola exatamente passa pelo orígem do círculo. Um pouco mais, e o fio se enrola em volta do pino no caso de um pêndulo interrompido. Note que essa altura de soltura é um pouco menos do que o Galileu afirmou (ele disse que seria necessário usar uma altura <span class="math notranslate nohighlight">\(h\)</span> ou exato um raio).</p>
+<p>Para terminar, vamos mostrar que <span class="math notranslate nohighlight">\(\sin{\theta_c} = \sqrt{1/3}\)</span>. Certamente deve de ter uma maneira geométrica, pelas propriedades de círculos e parábolas de mostrar isso. Mas fiz por força bruta, colocando <span class="math notranslate nohighlight">\(x=0, y=0\)</span> nas equações horárias do parábola. Usando <span class="math notranslate nohighlight">\(x(t_0) = 0\)</span> temos</p>
+<div class="math notranslate nohighlight">
+\[
+t_0 = \frac{h\cos{\theta_c}}{v_c}
+\]</div>
+<p>Inserindo este tempo em <span class="math notranslate nohighlight">\(y(t_0) = 0\)</span> temos</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2}g \frac{h^2}\cos{\theta_c}{v_{c}^2\sin{\theta_c}^2} = h\sin{\theta_c} + v_c\cos{\theta_c}\frac{h\cos{\theta_c}}{v_{c}\sin{\theta_c}}
+\]</div>
+<p>Pulando alguns passos e usando <span class="math notranslate nohighlight">\(v_{c}^2 = hg\sin{\theta_c}\)</span> chegamos a</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\sin{\theta_c}²}{\cos{\theta_c}^2} = \frac{1}{2}
+\]</div>
+<p>o que mostra que <span class="math notranslate nohighlight">\(\sin{\theta_c} = \sqrt{1/3}\)</span> (e <span class="math notranslate nohighlight">\(\cos{\theta_c} = \sqrt{2/3}\)</span>).</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">O Pêndulo Interrompido: proposta</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condicao-para-justamente-completar-o-circulo">Condição para <em>justamente</em> completar o círculo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condicao-para-justamente-passar-pelo-centro-do-circulo">Condição para <em>justamente</em> passar pelo centro do círculo</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ewout ter Haar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright CC-BY.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
