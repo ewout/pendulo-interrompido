@@ -10,9 +10,11 @@ name: galileu-pi
 Desenho do pêndulo interrompido, tirado do "Duas Novas Ciências". 
 ```
 
-Galileu usa o pêndulo interrompido para fins retóricos. Está querendo convencer seus interlocutores da plausibilidade de algo (um "postulado") que a gente hoje chamaria de conservação de energia mecânica: que a velocidade final adquirido por massas descendo rampas depende somente da altura da rampa, desde que não haja "impedimentos" ou "acidentes" ou "imperfeições" [^exp]. Vai usar esta ideia no seu tratamento de aceleração "natural" (queda livre).
+Galileu usa o pêndulo interrompido para fins retóricos. Está querendo convencer seus interlocutores da plausibilidade de algo (um "postulado") que a gente hoje chamaria de conservação de energia mecânica: que a velocidade final adquirido por massas descendo rampas depende somente da altura da rampa, desde que não haja "impedimentos" ou "acidentes" ou "imperfeições". Vai usar esta ideia no seu tratamento de aceleração "natural" (queda livre).
 
-[^exp]: O papel de experimentos, experimentos idealizados ou de pensamento e "impedimentos" é muito interessante para investigar. Há diferentes interpretações na literatura (Koyré versus Stillman Drake, por exemplo). Há uma discussão interessante sobre as lições epistemilógicas do Galileu e como poderiam ser tratados em sala de aula em {cite}`matthews_time_2000`
+```{margin} Acidentes e Abstrações
+O papel de experimentos, experimentos idealizados ou de pensamento e "impedimentos" é interessante para investigar mais. Há diferentes interpretações na literatura (Koyré versus Stillman Drake, por exemplo). Há uma discussão interessante sobre as lições epistemilógicas do Galileu e como poderiam ser tratados em sala de aula no livro do Michael Matthews {cite}`matthews_time_2000`. Veja também o resumo sobre a [história do pêndulo](historia.md)
+```
 
 ```{figure} galileu-rampas.png
 ---
@@ -26,7 +28,7 @@ Mais tarde, Galileu vai usar uma ideia parecida, quando fala sobre a descida e s
 >
 >  -- {cite}`matthews_time_2000`
 
-Durante a discussão do pêndulo interrompido o Galileu afirma algo que não é verdade. É preciso reconhecer que a afirmação não afeta o raciocínio principal, o que postulado que a massa chega na mesma altura de que foi solta, independente do caminho. Mas é interessante comparar o que diz Galileu com o que um iniciante hoje diria quando é instigado sobre o problema. Certamente a massa "quer" chegar na mesma altura do que foi solta e quando o pino está disposto de maneira que isso é impossível, ou quando a altura de soltura é grande demais, então a massa deve fazer a volta inteira e o fio do pêndulo deve se enrolar.
+Durante a discussão do pêndulo interrompido o Galileu afirma algo que não é verdade. É preciso reconhecer que a afirmação não afeta o raciocínio principal (que o a massa chega na mesma altura de que foi solta, independente do caminho). Mas é interessante comparar o que diz Galileu com o que um iniciante hoje diria quando é instigado sobre o problema. Segundo este raciocínio, a massa "quer" chegar na mesma altura do que foi solta e quando o pino está disposto de maneira que isso é impossível, ou quando a altura de soltura é grande demais, então a massa deve fazer a volta inteira e o fio do pêndulo deve se enrolar. Veremos que a situação é um pouco mais complexa.
 
 
 ```{figure} galileu-erro.png
@@ -49,7 +51,7 @@ A pergunta agora é se há um potencial didático neste experimento.
 
 ### Conservação de energia mecânica
 
-O uso mais óbvio é fazer uma analogia como o experimento *loop*. Como mencionado em {cite}`borges_critica_2019`, experimentos muitas vezes são considerados como ilustrações e podem servir para contextualizar modelos teóricos visto em livros-texto ou em sala de aula. O *loop* é o tipo de exercício usado como ilustração de como considerações de conservação de energia mecânica podem tornar viáveis sua solução. Neste contexto vale também lembrar o estudo clássico na área de ensino de física que mostra como iniciantes e especialistas classificam exercícios de física diferentemente: os especialistas classificam exercícios baseados nos princípios físicos necesssários para resolvê-los (conservação de energia, segunda lei de Newton, etc.), enquanto iniciantes focam nas características superficiais (por exemplo se envolve rampas, ou polias ou forças gravitationais, ou a força normal) {cite}`chi_categorization_1981`.
+O uso mais óbvio é fazer uma analogia como o experimento *loop*. Como mencionado em {cite}`borges_critica_2019`, por bem ou por mal, experimentos didáticos muitas vezes são considerados como ilustrações da teoria, servindo para contextualizar modelos teóricos visto em livros-texto ou em sala de aula. O *loop* é o tipo de exercício onde considerações de conservação de energia mecânica tornam viável sua solução. Neste contexto vale também lembrar o estudo clássico na área de ensino de física que mostra como iniciantes e especialistas classificam exercícios de física diferentemente: os especialistas classificam exercícios baseados nos princípios físicos necesssários para resolvê-los (conservação de energia, segunda lei de Newton, etc.), enquanto iniciantes focam nas características superficiais (por exemplo se envolve rampas, ou polias ou forças gravitationais, ou a força normal) {cite}`chi_categorization_1981`.
 
 Nesta abordagem podemos pensar numa encaminhamento parecido com o atual experimento do MEXI [Loop](http://www.fep.if.usp.br/~fisfoto/rotacao/loop/index.php). É interessante o fato que o modelo matemático é igual para o loop e o pêndulo interrompido, mas os desvios do modelo devem ser bem diferentes: atrito (do ar, de deslizamento) e energia convertido em energia rotacional pelo rolamento num caso e atrito do ar e interno do fio no outro caso. 
 
@@ -66,9 +68,9 @@ Um aspecto importante do experimento era o prazer motórico de "acertar" o pino,
  
 Quando eu mesmo fiz o experimento com da ordem de 20 alturas do pino diferentes, cheguei num ajuste $Hc = (0.98 \pm 0.005) h$, longe do valor do modelo. Acredito que pode ter havido um grande erro sistemático na determinação das alturas, sobretudo a altura de abandono. Um outro motivo pela discrepância é que os efeitos de atrito (arrasto do ar, perda de energia na choque com o pino) elevaram a altura de abandono necessária para chegar justamente na altura necessário para a massa bater no pino. 
  
-Mas esse resultado leva a uma situação interessante: o resultado experimental parecia confirmar uma previsão errônea ($H_c = h$). É uma oportunidade de discutir algo que historiadores da ciência debatem: o papel de experimentos e a relação entre modelo e mundo real para Galileu e a ciência em geral. Há interlocutores contemporâneos do Galileu (del Monte, por exemplo), conforme recontando pelo Michael Matthews ({cite}`matthews_time_2000`)
+Mas esse resultado leva a uma situação interessante: o resultado experimental parecia confirmar uma previsão errônea ($H_c = h$). É uma oportunidade de discutir algo que historiadores da ciência debatem: o papel de experimentos e a relação entre modelo e mundo real para Galileu e a ciência em geral. Há interlocutores contemporâneos do Galileu (del Monte, por exemplo), conforme recontado pelo Michael Matthews ({cite}`matthews_time_2000`), que questionariam resultados do Galileu justamente se baseando em experiências. 
 
->Galileo and del Monte had had an earlier exchange of letters (they were lost by the time Galileo's Opere was collected) about motion in a semicircle, and it was Galileo's beliefthat such motion was tautochronous.8 Del Monte could not believe these claims and found them wanting when he rolled balls inside an iron hoop. He was a scientist-engineer and enough of an Aristotelian to believe that tests against experience were the ultimate adjudicator of claims in physics. Galileo's claims failed the test. But Galileo replied that accidents interfered with del Monte's test: his wheel rim was not perfectly circular and, as he stated elsewhere, the rim was not smooth enough.
+>Galileo and del Monte had had an earlier exchange of letters (they were lost by the time Galileo's Opere was collected) about motion in a semicircle, and it was Galileo's belief that such motion was tautochronous. Del Monte could not believe these claims and found them wanting when he rolled balls inside an iron hoop. He was a scientist-engineer and enough of an Aristotelian to believe that tests against experience were the ultimate adjudicator of claims in physics. Galileo's claims failed the test. But Galileo replied that accidents interfered with del Monte's test: his wheel rim was not perfectly circular and, as he stated elsewhere, the rim was not smooth enough.
 
 Mas, observe Matthews,
 

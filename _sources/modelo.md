@@ -5,7 +5,14 @@ Vamos analisar um modelo matemático para descrever a trajetória de uma massa n
 2. ser inicialmente circular, mas a partir de uma certa altura ou ângulo crítico a massa se "desprende" da trajetória circular, a força normal ou da tensão é zerada e a massa segue em queda livre;
 3. ser completamente circular: a velocidade incicial é suficiente para completar o círculo.
 
-Durante a parte circular da trajetória circular há forças de vínculo (a força normal e a tensão no fio respectivamente) fornecendo parte da força centrípeta. Em ambos os casos há a força da gravidade, com componentes perpendicular (fornecendo uma parte da força centrípeta) e tangencial. Há, obviamente, também forças de atrito e graus de liberdade (rotação da massa, movimento do fio) que não vamos considerar inicialmente.
+Durante a parte circular da trajetória circular há forças de vínculo (a força normal e a tensão no fio para o *loop* e pêndulo respectivamente) fornecendo parte da força centrípeta. Em ambos os casos há a força da gravidade, com componentes perpendicular (fornecendo uma parte da força centrípeta) e tangencial. Há, obviamente, também forças de atrito e graus de liberdade (rotação da massa, movimento do fio) que não vamos considerar inicialmente.
+
+
+```{image} modelo-v0.jpg
+:width: 300px
+:align: center
+```
+
 
 Nossa referência é o centro do círculo (0,0). Vamos chamar o raio do círculo $h$ e soltamos a massa $m$ de uma altura $H$. Em nosso referencial, se o ponto mais baixo da trajetória é $-h$ e se a gente solta a massa de $H \leq 0$, estamos na situação 1 acima, a de movimento periódico.  Se $H \geq 0$, a velocidade $v_0$ em $(-h,0)$ é dado por
 
@@ -36,7 +43,24 @@ Ou seja, precisamos soltar a massa de uma altura um pouco *mais* do que $h$ para
 ### Condição para *justamente* passar pelo centro do círculo
 Se soltar a massa de uma altura $0 < H <  \frac{3}{2}h $ em algum momento antes de chegar no topo a magnitude da força de vínculo se torna zero e a massa segue em queda livre. Começando com velocidade inicial $v_0$ em $(-h,0)$, perguntamos para qual ângulo $\theta_c$ a força de vínculo (a tensão ou força normal) se torna zero.
 
-XXX inserir uma figura
+::::{grid}
+:gutter: 2
+
+:::{grid-item}
+:outline:
+```{image} modelo-vc.jpg
+:width: 100%
+:align: center
+```
+:::
+:::{grid-item}
+:outline:
+```{image} modelo-vc.jpg
+:width: 100%
+:align: center
+```
+:::
+::::
 
 No momento crítico em que a força de vínculo é zero, a força centrípeta é dado (somente) pela componente perpendicular da força gravitação e temos
 
@@ -82,13 +106,13 @@ $$
 Inserindo este tempo em $y(t_0) = 0$ temos
 
 $$
-\frac{1}{2}g \frac{h^2}\cos{\theta_c}{v_{c}^2\sin{\theta_c}^2} = h\sin{\theta_c} + v_c\cos{\theta_c}\frac{h\cos{\theta_c}}{v_{c}\sin{\theta_c}}
+\frac{1}{2}g \frac{h^2\cos^2{\theta_c}}{v_{c}^2\sin^2{\theta_c}} = h\sin{\theta_c} + v_c\cos{\theta_c}\frac{h\cos{\theta_c}}{v_{c}\sin{\theta_c}}
 $$
 
 Pulando alguns passos e usando $v_{c}^2 = hg\sin{\theta_c}$ chegamos a 
 
 $$
-\frac{\sin{\theta_c}²}{\cos{\theta_c}^2} = \frac{1}{2}
+\frac{\sin^2{\theta_c}}{\cos^2{\theta_c}} = \frac{1}{2}
 $$
 
 o que mostra que $\sin{\theta_c} = \sqrt{1/3}$ (e $\cos{\theta_c} = \sqrt{2/3}$).

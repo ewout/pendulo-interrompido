@@ -5,5 +5,7 @@ Desde Galileu, o pêndulo virou um verdadeiro "exemplar" no sentido Kuhniano. Si
 >
 > -- {cite}`matthews_time_2000` (tradução nossa).
 
-A análise teórico do pêndulo mais importante foi feito antes de Newton pelo Huygens, que estabeleu 
+(Pretendo dar um pequeno resumo das leituras que fiz sobre o papel do pêndulo... basicamente o resumos do livro do Matthews "Time for Science Education" )
+
+A análise teórico do pêndulo mais importante foi feito antes de Newton pelo Huygens, que estabeleu ...XXX
 
