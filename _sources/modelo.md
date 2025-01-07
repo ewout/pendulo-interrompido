@@ -55,7 +55,7 @@ Se soltar a massa de uma altura $0 < H <  \frac{3}{2}h $ em algum momento antes 
 :::
 :::{grid-item}
 :outline:
-```{image} modelo-vc.jpg
+```{image} modelo-fcp.jpg
 :width: 100%
 :align: center
 ```
