@@ -1,0 +1,4 @@
+\selectlanguage *{english}
+\contentsline {chapter}{\numberline {1}Modelo matemático para o Pêndulo Interrompido}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Condição para \sphinxstyleemphasis {justamente} completar o círculo}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Condição para \sphinxstyleemphasis {justamente} passar pelo centro do círculo}{4}{section.1.2}%
