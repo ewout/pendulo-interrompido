@@ -122,7 +122,7 @@ O [modelo](modelo.md) faz algumas previsões que podem ser checados pela anális
 ### Primeira proposta para começar fazer filmagens
 Me parece interessante combinar elementos das duas abordagens acima. Uma ideia para desenhar a atividade do pêndulo interrompido é:
 
-1. Começar apresentar ao estudante uma filmagen "em aberto", soltando o pêndulo de uma altura $H=h$ e visualmente deixar bem claro (por meio de uma barra horizontal, por exemplo), que nestas condições a trajetória no outro lado "podia ser" um círculo com raio $h$. Perguntamos, antes do video rodar, o que vai acontecer. Depois roda o vídeo e mostra que a tensão no fio (a força de vínculo que mantem a massa no círculo com raio $h$), fica zero *antes* de chegar na altura $h$. O fio afrouxa num ângulo $\theta_c = 42^circ$ segundo o modelo.
+1. Começar apresentar ao estudante uma filmagen "em aberto", soltando o pêndulo de uma altura $H=h$ e visualmente deixar bem claro (por meio de uma barra horizontal, por exemplo), que nestas condições a trajetória no outro lado "podia ser" um círculo com raio $h$. Perguntamos, antes do video rodar, o que vai acontecer. Talvez o estudante é tentado a raciocinar que, se a altura de soltura é $h$ (e visualmente mostramos isso), no outro lado do pino a massa deve chegar a uma alturna $h$ também, por conservação de energia! Depois roda o vídeo e mostra que a tensão no fio (a força de vínculo que mantem a massa no círculo com raio $h$), fica zero *antes* de chegar na altura $h$ (o fio afrouxa num ângulo $\theta_c = 42^circ$ segundo o modelo).
 2. Depois de ter desafiado o estudante, e talvez despertado seu interesse, mostramos o que o modelo prevê para o ângulo crítico em que o fio afrouxa (veja abaixo).
 3. Finalmente, encaminhamos ele aos nossos filmagens para analisar os quadros. Pode ter filmagens para $H = 0,{}5h$, $H=0,{}866h$ $H = h$ e $H = 1,{}5h$ (nesta última altura o modelo diz que a massa completa o círculo). 
 
@@ -139,7 +139,7 @@ name: Modelo para theta_c
 Ao soltar de uma altura $H$ (com referência o pino), a força de vínculo (a tensão no fio), se torna zero em $\theta_c$. 
 ```
 
-Acredito que $\theta_c}$ deve ser fácil de determinar com precisão. É um *feature* interessante desta atividade que o momento que a força de vínculo deixe de existir é bem mais fácil de visualizar e determinar do que no caso o experimento do *loop*. 
+Acredito que $\theta_c$ deve ser fácil de determinar com precisão. É um *feature* interessante desta atividade que o momento que a força de vínculo deixe de existir é bem mais fácil de visualizar e determinar do que no caso o experimento do *loop*. 
 
 Em princípio, a altura de soltura é somente usado para dar uma velocidade inicial $v_0$ no quadrante da trajetória circular que estamos analisando. Em princípio, poderíamos determinar $v_0$ a partir dos nossos quadros. Mas talvez é interessante, do ponto de vista didática, manter o foco na altura de soltura $H$, porque assim é que podemos fazer a ligação entre o modelo matemático, a nossa implementação do experimento e o experimento como descrito por Galileu. 
 
